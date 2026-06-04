@@ -1,0 +1,12 @@
+tfstate contains important data about terraform resource IDs, aRNs, bucket names etc.
+
+so it should be kept secure and not commited to git; because it could contain secrets like passwords or IAM details
+
+later on in my journey i will cover securing tfstate with concepts like: 
+	remote state
+	s3 backends
+	encryption
+	locking
+	dynamoDB locking
+	state security
+

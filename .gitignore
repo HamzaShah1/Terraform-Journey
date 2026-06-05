@@ -2,3 +2,10 @@
 *.tfstate
 *.tfstate.*
 .terraform.lock.hcl
+*.pem
+*.key
+terraform.tfvars
+*.pem
+*.key
+*.tfvars
+crash.log

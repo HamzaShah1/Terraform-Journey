@@ -1,0 +1,9 @@
+What is jsonencode and why is it useful?
+
+json encode can convert your terraform code into json, this is usefull because alot of AWS apis expect json documents. If you were to write out the json yourself; it may be difficult and susceptible to human error.
+
+some examples of where JSON is expected is: AWS IAM policies, ECS task definitions, AWS Eventbridge rules, IAM trust relationships.
+
+Raw JSON is hard to read and susceptible to errors, for example: policy = "{ \"Version\": \"2012-10-17\" }"    <<<----- This is very complicated.
+
+jsonencode() allows Terraform objects and variables to be converted into valid JSON automatically, making configurations easier to maintain and less error prone.

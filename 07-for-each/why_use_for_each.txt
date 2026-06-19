@@ -1,0 +1,8 @@
+Interview question;
+Why would you use For each instead of count?
+
+you would use for each instead of count as you can use ift to create resources with unique identities, whereas if you use count it would create resources tracked by index.
+
+for each tracks resources using keys whereas coutn uses indexes.
+
+tracking resources by index also creates a problem when removing resources; if you want to remove one resource with index x, it will remove that but then there will now be another resource with that index x - this may create problems.

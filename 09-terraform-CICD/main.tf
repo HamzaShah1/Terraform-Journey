@@ -11,6 +11,6 @@ provider "null" {}
 
 resource "null_resource" "example" {
   triggers = {
-    environment = "dev"
+    environment = "test"
   }
 }

@@ -1,36 +1,36 @@
 name: Terraform-CI
 
 on:
-	push:
-		branches:
-			- main
-			- test-terraform-ci
- 
-	pull_request:
+        push:
+                branches:
+                        - main
+                        - test-terraform-ci
+
+        pull_request:
 
 jobs:
-	terraform:
-		runs-on: ubuntu-latest
+        terraform:
+                runs-on: ubuntu-latest
 
-		defaults:
-			run:
-				working-directory: ./09-terraform-CICD		
-	
-		steps:
-			- name: checkout repository
-			  uses: actions/checkout@v4
+                defaults:
+                        run:
+                                working-directory: ./09-terraform-CICD
 
-			- name: setup terraform
-			  uses: hashicorp/setup-terraform@v3
+                steps:
+                        - name: checkout repository
+                          uses: actions/checkout@v4
 
-			- name: run terraform init
-			  run: terraform init
-			
-			- name: run terraform fmt
+                        - name: setup terraform
+                          uses: hashicorp/setup-terraform@v3
+
+                        - name: run terraform init
+                          run: terraform init
+
+                        - name: run terraform fmt
                           run: terraform fmt
 
-			- name: run terraform validate
+                        - name: run terraform validate
                           run: terraform validate
 
-			- name: run terraform plan
+                        - name: run terraform plan
                           run: terraform plan

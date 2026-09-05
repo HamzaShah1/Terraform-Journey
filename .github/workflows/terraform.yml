@@ -1,6 +1,11 @@
 name: Terraform-CI
 
-on: 
+on:
+	push:
+		branches:
+			- main
+			- test-terraform-ci
+ 
 	pull_request:
 
 jobs:
